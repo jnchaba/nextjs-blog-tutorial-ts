@@ -5,16 +5,22 @@ import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
 
-export default function Home({ allPostsData }) {
+export default function Home({ allPostsData }: {
+  allPostsData: {
+    date: string,
+    title: string,
+    id: string
+  }[]
+}) {
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>[Your Self Introduction]</p>
+        <p>Hello I&apos;m Jakub. I&apos;m a software engineer and I am learning Next.JS and I've converted an existing project to TypeScript here.</p>
         <p>
-          (This is a sample website - you’ll be building a site like this in{' '}
+          (This is a sample website - you&apos;ll be building a site like this in{' '}
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
         </p>
       </section>
